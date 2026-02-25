@@ -1310,6 +1310,26 @@
 1229. trouver le numero de telephone de SOCIETE LESAGE &amp FILS, 57 RUE DE LA MAIRIE, ville CHEMY code postale 59147, fonction : RRH autre numero que 320903099 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 59342
 1230. trouver le numero de telephone de DEPARTEMENT DU NORD, 51 RUE ALAIN DE LILLE, ville LILLE code postale 59000, fonction :  autre numero que 320956363 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 136108
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 === Lot 42 ===
 1231. trouver le numero de telephone de ENGIE ENERGIE SERVICES, RUE DES FAMARDS, ville FRETIN code postale 59273, fonction : RRH autre numero que 320967317 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 73470
 1232. trouver le numero de telephone de OTIS, 344 AVENUE DE LA MARNE, ville MARCQ EN BAROEUL code postale 59700, fonction : RESPONSABLE RH autre numero que 320997635 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 88838

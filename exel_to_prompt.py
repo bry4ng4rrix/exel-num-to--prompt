@@ -36,7 +36,7 @@ def generate_phone_search_prompts(input_file, output_file, batch_size=30):
                 
                 query = (
                     f"{global_counter}. "
-                    f"trouver le numero de telephone de {address1}, {address2}, ville {city} code postale {postal_code}, fonction : {fonction_rrh} autre numero que {phone_number} dans tous les web et ignore les numero qui commence par 08 et 09"
+                    f"trouver le numero de telephone de {address1}, {address2}, ville {city} code postale {postal_code}, fonction : {fonction_rrh} autre numero que {phone_number} dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id {source_id}"
                 )
 
                 batch.append(query)

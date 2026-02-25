@@ -2290,6 +2290,43 @@
 2129. trouver le numero de telephone de LA POSTE, ROUTE NATIONALE 7, ville PUGET SUR ARGENS code postale 83480, fonction :  autre numero que 494798746 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 131421
 2130. trouver le numero de telephone de ATHLETIC CLUB AJACCIEN ACA FOOTBALL, RUE FRANCOIS COTY, ville AJACCIO code postale 20090, fonction :  autre numero que 495203252 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 94968
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 === Lot 72 ===
 2131. trouver le numero de telephone de LA POSTE, ROUTE DE CAMPO DELL ORO, ville AJACCIO code postale 20090, fonction :  autre numero que 495235802 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 141596
 2132. trouver le numero de telephone de VIBEL, PANCHETTA, ville SARROLA CARCOPINO code postale 20167, fonction : RESPONSABLE RH autre numero que 495237750 dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id 147573

@@ -1,10 +1,10 @@
 import pandas as pd
 
-def generate_phone_search_prompts(input_file, output_file, batch_size=15):
+def generate_phone_search_prompts(input_file, output_file, batch_size=40):
     try:
-        df = pd.read_excel(input_file)
+        df = pd.read_excel(input_file, sheet_name='PAS DE TONAL')
 
-        required_columns = ['RS', 'ADRESSE4', 'VILLE', 'CP', 'ID']
+        required_columns = ['source_id', 'address1', 'address2', 'city', 'postal_code', 'FONCTION_RRH']
         missing_columns = [col for col in required_columns if col not in df.columns]
 
         if missing_columns:
@@ -18,23 +18,24 @@ def generate_phone_search_prompts(input_file, output_file, batch_size=15):
         with open(output_file, 'w', encoding='utf-8') as f:
             for index, row in df.iterrows():
 
-                rs = str(row['RS']).strip()
-                adresse = str(row['ADRESSE4']).strip()
-                ville = str(row['VILLE']).strip()
-                cp = str(row['CP']).strip()
-                id_value = str(row['ID']).strip()
+                source_id = str(row['source_id']).strip()
+                address1 = str(row['address1']).strip()
+                address2 = str(row['address2']).strip()
+                city = str(row['city']).strip()
+                postal_code = str(row['postal_code']).strip()
+                fonction_rrh = str(row['FONCTION_RRH']).strip() if 'FONCTION_RRH' in row and pd.notna(row['FONCTION_RRH']) else ''
 
                 line_number = index + 2  # ligne Excel réelle
 
+                address = f"{address1}"
+                if address2:
+                    address += f", {address2}"
+                
+                fonction_info = f", fonction : {fonction_rrh}" if fonction_rrh else ""
+                
                 query = (
                     f"{global_counter}. "
-                    f"Trouver le numéro de téléphone de {rs}, "
-                    f"adresse : {adresse}, "
-                    f"ville : {ville}, "
-                    f"code postal : {cp}, "
-                    f"ID : {id_value} "
-                    f"(ligne Excel : {line_number}), "
-                    f"rechercher sur tous les sites web."
+                    f"trouver le numero de telephone de {address1}, {address2}, ville {city} code postale {postal_code}, fonction : {fonction_rrh} dans tous les web et ignore les numero qui commence par 08 et 09"
                 )
 
                 batch.append(query)

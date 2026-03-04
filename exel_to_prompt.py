@@ -2,7 +2,7 @@ import pandas as pd
 
 def generate_phone_search_prompts(input_file, output_file, batch_size=30):
     try:
-        df = pd.read_excel(input_file, sheet_name='FN')
+        df = pd.read_excel(input_file, sheet_name='BASE')
 
         required_columns = ['source_id', 'address1', 'address2', 'city', 'postal_code', 'phone_number']
         missing_columns = [col for col in required_columns if col not in df.columns]

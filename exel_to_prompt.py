@@ -4,7 +4,7 @@ def generate_phone_search_prompts(input_file, output_file, batch_size=30):
     try:
         df = pd.read_excel(input_file, sheet_name='FN')
 
-        required_columns = ['source_id', 'address1', 'address2', 'city', 'postal_code', 'FONCTION_RRH', 'phone_number']
+        required_columns = ['source_id', 'address1', 'address2', 'city', 'postal_code', 'phone_number']
         missing_columns = [col for col in required_columns if col not in df.columns]
 
         if missing_columns:
@@ -23,7 +23,6 @@ def generate_phone_search_prompts(input_file, output_file, batch_size=30):
                 address2 = str(row['address2']).strip()
                 city = str(row['city']).strip()
                 postal_code = str(row['postal_code']).strip()
-                fonction_rrh = str(row['FONCTION_RRH']).strip() if 'FONCTION_RRH' in row and pd.notna(row['FONCTION_RRH']) else ''
                 phone_number = str(row['phone_number']).strip() if 'phone_number' in row and pd.notna(row['phone_number']) else ''
 
                 line_number = index + 2  # ligne Excel réelle
@@ -32,11 +31,10 @@ def generate_phone_search_prompts(input_file, output_file, batch_size=30):
                 if address2:
                     address += f", {address2}"
                 
-                fonction_info = f", fonction : {fonction_rrh}" if fonction_rrh else ""
                 
                 query = (
                     f"{global_counter}. "
-                    f"trouver le numero de telephone de {address1}, {address2}, ville {city} code postale {postal_code}, fonction : {fonction_rrh} autre numero que {phone_number} dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id {source_id}"
+                    f"trouver le numero de telephone de {address1}, {address2}, ville {city} code postale {postal_code}, autre numero que {phone_number} dans tous les web et ignore les numero qui commence par 08 et 09 ,source_id {source_id}"
                 )
 
                 batch.append(query)
